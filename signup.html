@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Demo</title>
+</head>
+
+<body>
+    <h2>Create Account </h2>
+    <form>
+        <div>
+            <label for="fname">FirstName<span style="color: red;">*</span></label>
+            <input minlength="4" required type="text" id="fname" placeholder="Enter your First Name" />
+        </div>
+        <div>
+            <label for="lname">Last Name <span style="color: red;">*</span></label>
+            <input required type="text" id="lname" placeholder="Enter your Last Name" />
+        </div>
+
+        <div>
+            <label for="email">Email Id <span style="color: red;">*</span></label>
+            <input required type="email" id="email" placeholder="Enter your Email Id" />
+        </div>
+        <div>
+            <label for="password">Password <span style="color: red;">*</span></label>
+            <input minlength="6" maxlength="12" required type="password" id="password"
+                placeholder="Enter your Password" />
+        </div>
+        <div>
+            <label for="cpassword">Confirm Password<span style="color: red;">*</span></label>
+            <input minlength="6" maxlength="12" required type="password" id="cpassword"
+                placeholder="Enter your Password" />
+        </div>
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" />
+        </div>
+        <div>
+            <label for="mobile">Mobile No</label>
+            <input type="tel" id="mobile" />
+        </div>
+        <div>
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" id="male" />
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" id="female" />
+            </div>
+
+        </div>
+
+        <button>Login</button>
+    </form>
+</body>
+
+</html>
