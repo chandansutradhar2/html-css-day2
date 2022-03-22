@@ -8,8 +8,77 @@
     <title>Image Demo</title>
 </head>
 
-<body>
-    <img src="./assets/images/bg1.jpg" alt="Background cover" height="750px" width="1250px" />
+<body onload="onLoad()">
+    <!-- <img src="./assets/images/bg1.jpg" alt="Background cover" height="750px" width="1250px" /> -->
+    <div class="sm" id="sm">
+        <img src="./assets/images/bg1.jpg" height="450px" width="650px" usemap="#image-map">
+        <map name="image-map">
+            <area target="_blank" alt="monitor" title="small-monitor" href="" coords="192,319,13,242,2,75,91,90"
+                shape="poly">
+            <area target="_blank" alt="keyboard" title="small-keyboard" href="" coords="165,231,301,281,203,307"
+                shape="poly">
+            <area target="_blank" alt="mouse" title="small-mouse" href="" coords="212,223,298,256" shape="rect">
+        </map>
+    </div>
+    <div class="md" id="md">
+        <img src="./assets/images/bg1.jpg" height="450px" width="650px" usemap="#image-map-md">
+        <map name="image-map-md">
+            <area target="_blank" alt="monitor" title="md-monitor" href="" coords="192,319,13,242,2,75,91,90"
+                shape="poly">
+            <area target="_blank" alt="keyboard" title="md-keyboard" href="" coords="165,231,301,281,203,307"
+                shape="poly">
+            <area target="_blank" alt="mouse" title="md-mouse" href="" coords="212,223,298,256" shape="rect">
+        </map>
+    </div>
+    <div class="lg" id="lg">
+        <img src="./assets/images/bg1.jpg" height="450px" width="650px" usemap="#image-map-lg">
+        <map name="image-map-lg">
+            <area target="_blank" alt="monitor" title="large-monitor" href="" coords="192,319,13,242,2,75,91,90"
+                shape="poly">
+            <area target="_blank" alt="keyboard" title="large-keyboard" href="" coords="165,231,301,281,203,307"
+                shape="poly">
+            <area target="_blank" alt="mouse" title="large-mouse" href="" coords="212,223,298,256" shape="rect">
+        </map>
+    </div>
 </body>
 
 </html>
+
+<script>
+    function onLoad() {
+        if (window.screen.width < 500) {
+            console.log('small screen');
+            const div = document.getElementById('sm');
+            div.style.display = 'inline';
+        } else if (window.screen.width >= 500 && window.screen.width < 800) {
+            console.log('medium screen')
+            const div = document.getElementById('md');
+            div.style.display = 'inline';
+        } else if (window.screen.width > 800) {
+            console.log('large screen')
+            const div = document.getElementById('lg');
+            div.style.display = 'inline';
+        } else {
+            console.log('unable to determine screen')
+        }
+    }
+</script>
+
+<style>
+    .md {
+
+        /* visibility: hidden; */
+        display: none;
+    }
+
+    .lg {
+
+        /* visibility: hidden; */
+        display: none;
+    }
+
+    .sm {
+        /* visibility: hidden; */
+        display: none;
+    }
+</style>
