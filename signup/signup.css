@@ -1,0 +1,60 @@
+* {
+	font-family: "Merriweather", serif;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	padding-top: 10%;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	column-gap: 0.2rem;
+	row-gap: 0.7rem;
+	max-width: 400px;
+}
+
+.form-control {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.btn-grad {
+	background-image: linear-gradient(
+		to right,
+		#da22ff 0%,
+		#9733ee 51%,
+		#da22ff 100%
+	);
+}
+
+.btn-grad {
+	margin: 10px;
+	padding: 15px 45px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+}
+
+.btn-grad:hover {
+	background-position: right center; /* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+}
+
+.heading {
+	text-align: center;
+	word-spacing: inherit;
+	border-bottom-color: #00000038;
+	border-bottom-style: groove;
+	padding: 1rem;
+	padding-top: 0;
+	color: #7911d3;
+}
